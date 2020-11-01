@@ -12,16 +12,6 @@ module('Integration | Component | rental', function(hooks) {
     test('it renders information about a rental property', async function(assert) {
       await render(hbs`<Rental />`);
 
-
-    // assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    // await render(hbs`
-      // <Rental>
-        // template block text
-      // </Rental>
-    // `);
-
     // assert.equal(this.element.textContent.trim(), 'template block text');
     assert.dom('article').hasClass('rental');
     assert.dom('article h3').hasText('Grand Old Mansion');
